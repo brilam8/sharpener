@@ -1,3 +1,17 @@
-# sharpener
+# URL Sharpener
 
-make some sharp urls
+Sharpen your long urls into short ones! Built with JavaScript, Express.js, MongoDB, and HTML/CSS. 
+
+## Getting Started
+1. Clone this repository to your local computer
+2. Open `index.html` in the `routes` folder
+
+## Features
+1. Shorten a URL into a custom shortened URL.
+2. All created shortened URLs are stored in a MongoDB database!
+
+## Motivation
+Sometimes I just wanted to share a link with friends, for example a Google search, however, due to how Google designed their search engine, the links become really long. With URL Sharpener, it is extremely easy to shorten a URL that you can then share to others.
+
+## License
+MIT License (c) 2021 Brian Lam
