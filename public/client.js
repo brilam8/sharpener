@@ -9,6 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
         let longUrl = document.getElementById('longUrl').value;
         let shortUrl = document.getElementById('shortUrl').value;
         try {
+            let usefulVar = 0;
             let res = await fetch('/v1/shorturl', {
             method: 'POST',
             body: 
