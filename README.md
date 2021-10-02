@@ -6,7 +6,7 @@ Sharpen your long urls into short ones! Built with JavaScript, Express.js, Mongo
 1. Clone this repository to your local computer
 2. Create a MongoDB shard
 3. Make a `.env` file that contains the MongoURI for your MongoDB shard as well as the base URL for all shortened URLs. Look in `.env.example` for an example.
-4. Run `node .\index.js` to start the back-end server
+4. Run `node .\index.js` to start the back-end server.
 5. Open `index.html` in the `routes` folder and shorten your URLs!
 
 ## Features
