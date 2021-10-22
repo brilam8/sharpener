@@ -1,10 +1,10 @@
 console.log('Client-side code running');
 
-const output = document.getElementById("output");
+const output = document.getElementById('output');
 
 window.addEventListener('DOMContentLoaded', () => {
-    const recordForm = document.getElementById("recordForm");
-    recordForm.addEventListener("submit", async event => {
+    const recordForm = document.getElementById('recordForm');
+    recordForm.addEventListener('submit', async event => {
         event.preventDefault();
         let longUrl = document.getElementById('longUrl').value;
         let shortUrl = document.getElementById('shortUrl').value;
@@ -13,8 +13,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 method: 'POST',
                 body:
                     JSON.stringify({
-                        "longUrl": longUrl,
-                        "shortUrl": shortUrl
+                        'longUrl': longUrl,
+                        'shortUrl': shortUrl
                     }),
                 headers: { 'Content-Type': 'application/json' }
             });

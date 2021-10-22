@@ -1,17 +1,17 @@
-const express = require("express");
-const validUrl = require("valid-url");
-const Url = require("../database/schema/url");
+const express = require('express');
+const validUrl = require('valid-url');
+const Url = require('../database/schema/url');
 require('dotenv').config();
 
 var shortUrlRoute = express.Router();
 
-shortUrlRoute.post("/", async (req, res) => {
+shortUrlRoute.post('/', async (req, res) => {
     const longUrl = req.body.longUrl;
     const shortDesired = req.body.shortUrl;
     const urlCode = shortDesired;
     const baseUrl = process.env.baseURL;
     if (!validUrl.isUri(baseUrl)) {
-        return res.status(401).json("Internal error. Please come back later.");
+        return res.status(401).json('Internal error. Please come back later.');
     }
 
 
@@ -23,7 +23,7 @@ shortUrlRoute.post("/", async (req, res) => {
                 return res.status(200).json(url);
             } else {
 
-                const shortUrl = baseUrl + "/" + shortDesired;
+                const shortUrl = baseUrl + '/' + shortDesired;
                 url = new Url({
                     longUrl,
                     shortUrl,
@@ -36,10 +36,10 @@ shortUrlRoute.post("/", async (req, res) => {
             }
         } catch (err) {
             console.error(err.message);
-            return res.status(500).json("Internal Server error " + err.message);
+            return res.status(500).json('Internal Server error ' + err.message);
         }
     } else {
-        res.status(400).json("Invalid URL. Please enter a vlaid url for shortening.");
+        res.status(400).json('Invalid URL. Please enter a vlaid url for shortening.');
     }
 });
 
