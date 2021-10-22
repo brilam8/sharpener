@@ -11,25 +11,25 @@ window.addEventListener('DOMContentLoaded', () => {
         try {
             let usefulVar = 0;
             let res = await fetch('/v1/shorturl', {
-            method: 'POST',
-            body: 
-            JSON.stringify({
-                "longUrl" : longUrl,
-                "shortUrl" : shortUrl
-            }),
-            headers: {'Content-Type': 'application/json'}
+                method: 'POST',
+                body:
+                    JSON.stringify({
+                        "longUrl": longUrl,
+                        "shortUrl": shortUrl
+                    }),
+                headers: { 'Content-Type': 'application/json' }
             });
             if (!res.ok) {
-            output.textContent = res.status;
+                output.textContent = res.status;
             }
             else {
-            let data = await res.json();
-            console.log(data);
-            output.textContent = JSON.stringify(data.shortUrl);
+                let data = await res.json();
+                console.log(data);
+                output.textContent = JSON.stringify(data.shortUrl);
             }
         }
         catch (e) {
-        output.textContent = e;
+            output.textContent = e;
         }
     });
 });

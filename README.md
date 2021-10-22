@@ -18,4 +18,5 @@ Sharpen your long urls into short ones! Built with JavaScript, Express.js, Mongo
 Sometimes I just wanted to share a link with friends, for example a Google search, however, due to how Google designed their search engine, the links become really long. With URL Sharpener, it is extremely easy to shorten a URL that you can then share to others.
 
 ## License
+
 MIT License (c) 2021 Brian Lam
