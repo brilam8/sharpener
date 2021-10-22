@@ -1,6 +1,5 @@
 const express = require("express");
 const validUrl = require("valid-url");
-const config = require("config");
 const Url = require("../database/schema/url");
 require('dotenv').config();
 
