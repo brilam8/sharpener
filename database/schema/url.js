@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const urlSchema = new mongoose.Schema({
     urlCode: String,
@@ -6,4 +6,4 @@ const urlSchema = new mongoose.Schema({
     shortUrl: String
 });
 
-module.exports = mongoose.model("url", urlSchema);
+module.exports = mongoose.model('url', urlSchema);
